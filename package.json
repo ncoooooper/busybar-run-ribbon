@@ -1,7 +1,7 @@
 {
   "name": "busybar-run-ribbon",
   "private": true,
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Browse the latest Garmin run and its measured kilometer splits or recorded laps.",
   "author": "ncoooooper",
   "type": "module",
