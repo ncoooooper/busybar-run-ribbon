@@ -22,7 +22,7 @@ The last run stays on your desk after the watch comes off. The rear screen pairs
 
 ## Example from the emulator
 
-The recorded test used ten kilometers in 53 minutes. That works out to five minutes and eighteen seconds per kilometer. For this file the detail came from a recorded lap. A trace with kilometer crossings can give a different picture, especially on a run with pauses. Synthetic Garmin FIT files generated and decoded with Garmin's official SDK.
+The recorded test used ten kilometers in 53 minutes. That works out to five minutes and eighteen seconds per kilometer. For this file the detail came from a recorded lap. A trace with kilometer crossings can give a different picture, especially on a run with pauses. The companion read synthetic FIT files with Garmin’s official decoder.
 
 ## Set up the source
 
