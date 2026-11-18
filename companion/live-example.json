@@ -1,0 +1,4 @@
+{
+  "mode": "strava",
+  "token_file": "tokens.json"
+}

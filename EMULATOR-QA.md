@@ -9,3 +9,7 @@ Selected the latest running session of 10 km in 53 minutes, excluding a cycling 
 ## Display capture
 
 Firmware 1.3.1 rendered both README examples. The display run replayed sample inputs in a separate emulator project. The source test above describes how those readings were obtained. Each square in a guide GIF is one front-display pixel enlarged to 9 × 9. The production archive was built from the source in this repository.
+
+## New mode
+
+Two interactions were captured on firmware 1.3.1. Recorded source response. Back exited the app cleanly. See [recording details](media/source-mode-check.json).

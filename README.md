@@ -1,6 +1,6 @@
 # Run Ribbon
 
-Browse the latest Garmin run and its measured kilometer splits or recorded laps.
+Read the kudos count on your latest Strava activity or browse measured splits from a Garmin FIT export.
 
 The last run stays on your desk after the watch comes off. The rear screen pairs the overall moving pace with the elapsed splits, which is handy when a stop at a crossing made one kilometer look unusually slow.
 
@@ -45,3 +45,33 @@ Press **Back** to exit.
 The GIFs are excerpts from the emulator recording. Each front-display pixel is shown at 9× its original width and height. The end frames pause for reading.
 
 [Full recording](media/controls.mp4) · [Rear display](screenshots/back-1.png) · [Firmware test](EMULATOR-QA.md) · [MIT license](LICENSE)
+
+## Additional source setup
+
+Create a personal API application in Strava’s settings. Use `localhost` as the Authorization Callback Domain. Set `STRAVA_CLIENT_ID` and `STRAVA_CLIENT_SECRET` in your shell. Run `python3 companion/authorize.py`. Open its URL, allow activity read access and paste the full localhost redirect URL at the prompt, even if the browser shows a connection error. Add `--private-activities` to include your private activities. The script creates a private `tokens.json` and the companion refreshes it when needed. Strava is checked every three minutes by default. Increase `poll_seconds` for a smaller API allowance. Strava mode only uses Python’s standard library.
+
+From the repository root, copy the example and start the companion with Python 3.10 or newer.
+
+```sh
+cp companion/live-example.json config.json
+# Edit config.json for your source before starting the server.
+python3 companion/serve.py --config config.json
+```
+
+In the emulator, run `~/.busy-emulator/bin/busy-emulator allow-local 8770` and approve that port. Open **Apps → Run Ribbon → Setup**, set **Local companion URL** to `http://127.0.0.1:8770/reading`, save, then reopen the app. For a physical bar, start the companion with `--host YOUR_LAN_IP` and replace `127.0.0.1` with that address. Bind only to your trusted network. Open `/reading` on the host to inspect the current reading. Keep credentials in the host environment.
+
+## Count kudos on the latest activity
+
+Run with the Strava config and read KUDOS. A ride, swim or walk can replace your last run. The rear gives the activity name and date. The example ride has 18 kudos.
+
+![The example switches from 18 kudos to Ride.](media/guide/use-1.gif)
+
+## Check which activity was counted
+
+Turn to ACTIVITY and compare its name and distance with your latest Strava entry. Turn back to KUDOS for the new total. Only activities visible to the authorized account and scope are included.
+
+![The wheel returns from the activity type to the kudos count.](media/guide/use-2.gif)
+
+The recordings use example responses on emulator firmware. Each display pixel is enlarged to a 9 × 9 square.
+
+[Strava authentication](https://developers.strava.com/docs/authentication/) · [List athlete activities](https://developers.strava.com/docs/reference/#api-Activities-getLoggedInAthleteActivities).

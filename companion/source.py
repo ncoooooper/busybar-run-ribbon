@@ -1,8 +1,11 @@
 """Read the most recent Garmin running session and measured split detail from FIT exports."""
 from serve import page
-from fit_runs import runs,pace
 INTERVAL=30
 def snapshot(o,m):
+    if o.get("mode") == "strava":
+        from live import reading
+        return reading(o,m)
+    from fit_runs import runs,pace
     history,bad=runs(o,m)
     if not history:return dict(state="No running sessions",key="empty",pages=[page("GARMIN FIT","No runs","Add a running FIT file",f"{bad} unreadable files")])
     start,meters,seconds,laps,splits=history[-1]
