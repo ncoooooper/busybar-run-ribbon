@@ -1,0 +1,42 @@
+{
+  "id": "BB-014",
+  "source": "Synthetic Garmin FIT files generated and decoded with Garmin's official SDK.",
+  "scenario": "Selected the latest running session of 10 km in 53 minutes, excluding a cycling session, then opened its recorded lap.",
+  "keys": [
+    "up",
+    "down",
+    "ok"
+  ],
+  "frames": 54,
+  "distinct_frames": 13,
+  "exit": "App io.ncoooooper.runribbon exited: finished; heap peak 81.5 of 128 KiB",
+  "sha256": "3838bae966ad17148f5e1682675628e207f004fbe8ab3e809f386c0c9af3d666",
+  "pages": [
+    {
+      "caption": "LAST RUN",
+      "value": "10.00 km",
+      "lines": [
+        "2026-09-03 UTC",
+        "Moving 53:00",
+        "Pace 5:18/km"
+      ]
+    },
+    {
+      "caption": "LAP 1",
+      "value": "5:18",
+      "lines": [
+        "10.00 km / 53:00",
+        "Lap pace / km"
+      ]
+    }
+  ],
+  "initial": {
+    "caption": "LAST RUN",
+    "value": "10.00 km",
+    "lines": [
+      "2026-09-03 UTC",
+      "Moving 53:00",
+      "Pace 5:18/km"
+    ]
+  }
+}
