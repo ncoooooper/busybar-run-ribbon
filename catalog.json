@@ -2,5 +2,5 @@
   "category": "info-feeds",
   "short_description": "Browse the latest Garmin run and its measured kilometer splits or recorded laps.",
   "description": "Read the kudos count on your latest Strava activity or browse measured splits from a Garmin FIT export. Browse the latest Garmin run and its measured kilometer splits or recorded laps. Export original FIT activities from Garmin Connect or your watch to one directory. Install the official decoder with python3 -m pip install -r companion/requirements.txt in a virtual environment. Set folder to your local directory. The first page reports moving pace. Distance traces yield elapsed one-kilometer splits, including pauses. Files without a distance trace show recorded lap pace instead. Duplicate exports count once.",
-  "changelog": "Add latest-activity kudos from Strava."
+  "changelog": "New screen transitions and high-contrast LED previews."
 }

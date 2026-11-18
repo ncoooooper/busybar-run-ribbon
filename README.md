@@ -4,6 +4,32 @@ Read the kudos count on your latest Strava activity or browse measured splits fr
 
 The last run stays on your desk after the watch comes off. The rear screen pairs the overall moving pace with the elapsed splits, which is handy when a stop at a crossing made one kilometer look unusually slow.
 
+## Screen transitions
+
+Follow the recorded run from its summary into the session detail and back.
+
+![Run Ribbon front display. Follow the recorded run from its summary into the session detail and back.](media/guide/screen-transitions.gif)
+
+<details>
+
+<summary>Watch the rear display</summary>
+
+![Run Ribbon rear display during the recorded controls](media/guide/screen-transitions-rear.gif)
+
+</details>
+
+Turn from the kudos count to the activity that received them and back.
+
+![Run Ribbon front display. Turn from the kudos count to the activity that received them and back.](media/guide/screen-transitions-connected.gif)
+
+<details>
+
+<summary>Watch the rear display in connected mode</summary>
+
+![Run Ribbon rear display during the recorded controls](media/guide/screen-transitions-connected-rear.gif)
+
+</details>
+
 ## Read your latest running session
 
 1. Export the original FIT file into the configured folder and click the wheel to refresh.
@@ -42,7 +68,7 @@ Open BUSY Bar Emulator. From this repository, run:
 
 Press **Back** to exit.
 
-The GIFs are excerpts from the emulator recording. Each front-display pixel is shown at 9× its original width and height. The end frames pause for reading.
+The GIFs are excerpts from the emulator recording. Each LED occupies a 16 × 16 cell with a black border. The end frames pause for reading.
 
 [Full recording](media/controls.mp4) · [Rear display](screenshots/back-1.png) · [Firmware test](EMULATOR-QA.md) · [MIT license](LICENSE)
 
@@ -72,6 +98,6 @@ Turn to ACTIVITY and compare its name and distance with your latest Strava entry
 
 ![The wheel returns from the activity type to the kudos count.](media/guide/use-2.gif)
 
-The recordings use example responses on emulator firmware. Each display pixel is enlarged to a 9 × 9 square.
+The recordings use example responses on emulator firmware. Each LED occupies a 16 × 16 cell with a black border.
 
 [Strava authentication](https://developers.strava.com/docs/authentication/) · [List athlete activities](https://developers.strava.com/docs/reference/#api-Activities-getLoggedInAthleteActivities).
